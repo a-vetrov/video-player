@@ -2,6 +2,7 @@ import fs from 'node:fs/promises'
 import express from 'express'
 import type { Request, Response } from 'express'
 import type { ViteDevServer } from 'vite'
+import api from './backend/index.ts'
 
 const isProduction = process.env.NODE_ENV === 'production'
 const port = Number(process.env.PORT) || 5173
@@ -35,6 +36,8 @@ type RenderResult = {
 }
 
 type Render = (url: string) => Promise<RenderResult>
+
+app.use('/api', api)
 
 app.use('*all', async (req: Request, res: Response) => {
   try {

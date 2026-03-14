@@ -41,3 +41,27 @@
 .read-the-docs {
   color: #888;
 }
+
+.app {
+  text-align: left;
+}
+
+.video-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.video-list li {
+  padding: 0.5em 0;
+  border-bottom: 1px solid #333;
+}
+
+.video-list a {
+  color: #646cff;
+  text-decoration: none;
+}
+
+.video-list a:hover {
+  text-decoration: underline;
+}
